@@ -1,0 +1,419 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+svg.navbar-icon {
+	width: 6vw;
+	color: gray;
+	position:  fixed;
+	right: 1vw;
+	top: 1vh;
+	padding:  5px;
+	transition: ease .375s;
+	z-index: 106;
+}
+
+div#triger {
+	position: fixed;
+	background-image: url('../images/assets_photo/alke-logo.png');
+	background-color:  white;
+	width:  100%;
+	height: 0px;
+	z-index: 101;
+	background-size: 20%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-bottom: 1px gray solid;
+	transition: ease .375s;
+}
+
+div#triger.active{
+	height: 45px;
+}
+
+.wrapper{
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: ease .375s;
+}
+
+.wrapper.overlay{
+	background-color: rgba(0,0,0,0.3); 
+}
+.header{
+	width: 100vw !important;
+	background-image: url('../images/assets_photo/jakarta.jpeg');
+	min-height: 40vh;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position:  relative;
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+}
+.brand-logo {
+	position: relative;
+	width: 100vw;
+	height: 40vw;
+	background-image: url(../images/assets_photo/alke-logo.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+section.header:before {
+	position: absolute;
+	width:  100vw !important;
+	min-height:  100%;
+	content:  "";
+	background-color:  black;
+	opacity:  0.3;
+}
+.brand-name {
+	position: absolute;
+	color:  white;
+	font-size: 1.5rem;
+	font-family:  sans-serif;
+	text-transform:  uppercase;
+	display:  block;
+	bottom: 6%;
+	width: 100vw;
+	text-align: center;
+}
+
+.about-us{
+	width: 100vw;
+	min-height: 40vh;
+	font-family: sans-serif;
+	font-size: 1.2rem;
+	
+}
+
+.about-us div{
+	text-align: center;	
+	padding: 10px;
+	transition: ease .375s;	
+	transform: translateX(-100%);
+}
+
+.about-us div:nth-child(2){
+	transform: translateX(100%);
+}
+
+.about-us div.active{
+	transform: translateX(0%) !important;
+}
+
+.hamburger-bar{
+	background-image: url('../icon/hamburger-icon.svg');
+	color: white;
+	height: 40px;
+	width: 40px;
+	position:  fixed;
+	z-index:  10;
+	right: 10px;
+	top: 10px;
+	border: 2px solid gray;
+	border-radius:  5px;
+}
+
+nav{
+	height:  100%; 
+	width:  0; 
+	position:  fixed;
+	z-index:  100;
+	background-color:  white;
+	font-family:  sans-serif;
+	font-size:  1.5rem;
+	transition: ease .575s;
+	text-align: center;
+	right: 0;
+}
+nav div{
+	cursor: pointer;
+	transition: ease .375s;
+	padding: 10% auto;
+}
+
+nav div:hover{
+	border-bottom: 3px black solid;
+}
+
+nav.expand {
+	width: 70%;
+}
+
+nav.expand div {
+	display: block;
+}
+
+nav.expand div:first-child {
+	margin-top: 60px;
+}
+
+
+#product{
+	background-color: #ededed;
+	padding: 20px;
+}
+.product-wrapper {
+	position:  relative;
+	overflow:  hidden;
+}
+
+.product-container {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+}
+
+.product-item {
+	display: inline-block;
+	background-color: #86bbea;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	transition: ease .375s;
+	cursor: pointer;
+	-webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+	padding-right: 50px;
+}
+
+.product-item:hover {
+	background-color: white;
+	color: black;
+}
+
+.product-item:active {
+	background-color: white;
+	color: black;
+}
+
+.product-showcase-container {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	border: 2px #86bbea solid;
+	border-top: none;
+	padding: 10px;
+}
+.product-showcase{
+	display: none;
+}
+.product-showcase.active{
+	display:block;
+}
+.product-showcase div {
+	margin: 10px auto;
+	transition: all .575s ease;
+	height: 225px;
+	width: 225px;
+	display:  inline-block;
+	overflow:  hidden;
+	border: 1px black;
+}
+.product-showcase img {
+	transition: ease .375s;
+	width: 100%;
+}
+.product-showcase img:hover {
+	transform: scale(1.3);
+}
+
+#suplierForm h2{
+	text-align: center;
+	text-transform: capitalize;
+	font-family: sans-serif;
+}
+.suplier-form {
+	padding: 10px;
+}
+
+/*advancce form style*/
+
+form {
+	margin: 2em 0;
+} 
+.field {
+	display: flex;
+	flex-flow: column-reverse;
+	margin-bottom: 1em;
+}
+label, input, textarea {
+	transition: all 0.2s;
+	touch-action: manipulation;
+}
+input, textarea {
+	font-size: 1.5em;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	font-family: inherit;
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding: 0;
+	cursor: text;
+}
+
+input:focus, textarea:focus {
+	outline: 0;
+	border-bottom: 1px solid #666;
+}
+
+label {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-family: sans-serif;
+}
+input:placeholder-shown + label, textarea:placeholder-shown + label {
+	cursor: text;
+	max-width: 66.66%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transform-origin: left bottom;
+	transform: translate(0, 2.125rem) scale(1.5);
+}
+::-webkit-input-placeholder {
+	opacity: 0;
+	transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+	opacity: 1;
+}
+input:not(:placeholder-shown) + label,
+input:focus + label,
+textarea:not(:placeholder-shown) + label,
+textarea:focus + label {
+	transform: translate(0, 0) scale(1);
+	cursor: pointer;
+}
+
+#bannerHolder{
+	text-align: center;
+	background-color: #ededed;
+	min-height: 400px;
+}
+
+
+#contacUs{
+	display: grid;
+	grid-template-columns: 1fr;
+	background-color: #eb2f06;
+	text-align: center;
+	color: white;
+	font-family: sans-serif;
+}
+
+.contact-label {
+	text-align:  left;
+	font-family: sans-serif;
+	font-size:  1.2rem;
+}
+
+.contact-field {
+	text-align: right;
+	font-family:  sans-serif;
+}
+
+#contacUs div:last-child {
+	padding: 10px;
+	color: white;
+}
+
+@media only screen and (min-width: 750px) {
+	#product {
+		background-color: #ededed;
+		padding: 20px;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	.product-container {
+		display: grid;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.product-item{
+		clip-path: none;
+		border: 1px white solid;
+	}
+	.product-showcase-container {
+		border: 2px #86bbea solid;	
+	}
+	.product-showcase.active {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.suplier-form{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 40px;
+	}
+	div#triger {
+		background-size: 10%;
+	}
+	svg.navbar-icon{
+		width: 3vw;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.header{
+		height: 60vh;
+	}
+	.brand-logo {
+		bottom: 0;
+		height: 60vh;
+		background-size: 30%
+	}
+	.brand-name {
+		font-size: 2.5rem;
+	}
+	.about-us div{
+		width: 60%;
+		padding: 75px;
+	}
+
+	.about-us div:nth-child(2) {
+		transform: translateX(-100%);
+	}
+
+	.about-us div.active:nth-child(2){
+		transform: translateX(20%) !important;
+	}
+
+	.about-us div.active:nth-child(3){
+		transform: translateX(40%) !important;
+	}
+	.product-showcase div {
+		width: 400px;
+		height: 400px;
+		overflow-y: hidden;
+	}
+
+	div#triger.active {
+		height: 100px;
+	}
+	svg.navbar-icon {
+		display: none;
+	}
+	nav {
+		width: 100%;
+		height: 60px;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		align-items: center;
+		background-color: transparent;
+		color: white;
+	}
+	nav.active{
+		margin-top: 100px; 
+		border-top: 1px black solid;
+		border-bottom: 1px black solid;
+		background-color: white;
+		color:black;
+	}
+}

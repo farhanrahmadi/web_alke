@@ -1,0 +1,31 @@
+.img-wrapper {
+    text-align: center;
+}
+
+.img-responsive{
+	width: 300px;
+	height: auto;
+}
+
+.login-wrapper{
+	/*margin: auto 10px;*/
+	text-align: center;
+}
+
+input{
+	outline: none;
+	border: none;
+	border-bottom: thin black solid;
+	background-color: #fff;
+	padding: 5px;
+	width: 300px;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+
+.btn{
+	padding: 5px;
+	font-size: 1.2rem;
+	background: #fff;
+	border: 2px #888 solid;
+}
